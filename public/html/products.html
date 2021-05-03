@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары</title>
+    <script src="../js/main.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/categories.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body onload="getCategories('http://localhost:8080/productsList/search?page=0&size=2')">
+    <header>
+        <ul class="menu-main">
+            <li><a href="/">Главная</a> </li>
+            <li><a href="categories.html" class="current">Каталог</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="http://localhost:8080/profile">Профиль</a></li>
+        </ul>
+    </header>
+
+    <h2>Товары</h2>
+
+    <ul class="pagination-widget__pages">
+        <li class="pagination-widget__page" data-role="pagination-page" data-page-number="1">
+            <a class="pagination-widget__pagr-link"
+               onclick="getCategories('http://localhost:8080/categories/2/productsList/search?page=0&size=2')">1</a>
+        </li>
+        <li class="pagination-widget__page" data-role="pagination-page" data-page-number="2">
+            <a class="pagination-widget__pagr-link"
+               onclick="getCategories('http://localhost:8080/categories/2/productsList/search?page=1&size=2')">2</a>
+        </li>
+        <li class="pagination-widget__page" data-role="pagination-page" data-page-number="3">
+            <a class="pagination-widget__pagr-link"
+               onclick="getCategories('http://localhost:8080/categories/2/productsList/search?page=2&size=2')">3</a>
+        </li>
+    </ul>
+</body>
+</html>
